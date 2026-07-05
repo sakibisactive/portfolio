@@ -72,17 +72,17 @@ export default function AboutSection() {
               </h3>
 
               <p className="text-slate-300 text-sm leading-relaxed mb-6 font-sans">
-                Detail-oriented final-year Computer Science student at BRAC University preparing for a software engineering role, with a strong foundation in programming, databases, full-stack development, and applied machine learning.
+                Detail-oriented final-year Computer Science & Engineering (CSE) student at BRAC University preparing for a software engineering role, with a strong foundation in programming, databases, full-stack development, and applied machine learning.
               </p>
 
               <p className="text-slate-400 text-sm leading-relaxed mb-6 font-sans">
-                Experienced building web applications, data-driven systems, and IoT solutions, with a focus on writing reliable, maintainable software and deploying scalable intelligent systems.
+                Experienced building web applications, data-driven systems, and IoT solutions, with a focus on writing reliable, maintainable software and deploying scalable production systems.
               </p>
 
               <div className="pt-4 border-t border-white/10 space-y-3 font-mono text-xs text-slate-400">
                 <div className="flex items-center justify-between">
                   <span className="text-slate-500">Degree</span>
-                  <span className="text-slate-200">B.Sc. CSE (Final Year)</span>
+                  <span className="text-slate-200">B.Sc. in CSE (Final Year)</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-slate-500">Primary University</span>
@@ -90,7 +90,7 @@ export default function AboutSection() {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-slate-500">Target Role</span>
-                  <span className="text-emerald-400 font-semibold">Software / ML Engineer</span>
+                  <span className="text-emerald-400 font-semibold">Software Engineer</span>
                 </div>
               </div>
             </div>

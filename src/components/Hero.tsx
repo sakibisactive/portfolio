@@ -22,9 +22,9 @@ export default function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-          <span className="text-slate-300">Final-Year CS Student @ BRAC University</span>
+          <span className="text-slate-300">Final-Year CSE Student @ BRAC University</span>
           <span className="text-slate-600">|</span>
-          <span className="text-emerald-400 font-medium">Open to SE & ML Roles</span>
+          <span className="text-emerald-400 font-medium">Open to Software Engineering Roles</span>
         </motion.div>
 
         {/* Main Title */}
@@ -36,7 +36,7 @@ export default function Hero() {
         >
           Shahriar Sakib
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-slate-200 via-slate-400 to-emerald-400 text-3xl sm:text-5xl lg:text-6xl font-normal mt-2">
-            Building intelligent systems at the intersection of ML, NLP, and Swarm Robotics.
+            Building reliable, high-performance software systems across Full-Stack Web, Machine Learning, & IoT.
           </span>
         </motion.h1>
 
@@ -47,7 +47,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-2xl text-base sm:text-lg text-slate-400 leading-relaxed mb-10 font-sans"
         >
-          Software engineer and applied ML researcher focused on writing reliable, high-performance software. Experienced across full-stack applications, deep learning architectures, and decentralized multi-agent IoT networks.
+          Computer Science & Engineering student focused on writing maintainable, production-ready software. Versatile across full-stack web applications, relational & NoSQL databases, deep learning architectures, and decentralized IoT systems.
         </motion.p>
 
         {/* CTAs */}
@@ -87,7 +87,7 @@ export default function Hero() {
             <Cpu className="w-4 h-4 text-emerald-400 shrink-0" />
             <div>
               <span className="block text-slate-500 text-[10px] uppercase">Focus</span>
-              <span className="text-slate-200">ML, Deep Learning & Swarm AI</span>
+              <span className="text-slate-200">Full-Stack, Software Systems & ML</span>
             </div>
           </div>
 
