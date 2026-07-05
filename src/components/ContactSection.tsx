@@ -23,24 +23,23 @@ export default function ContactSection() {
 
     setIsSubmitting(true);
     try {
-      // Send form data to Web3Forms / Formspree service
+      const formData = new FormData();
+      formData.append("access_key", "623e94a2-421d-4426-b025-3b4839ec98f7");
+      formData.append("name", formState.name);
+      formData.append("email", formState.email);
+      formData.append("message", formState.message);
+      formData.append("subject", `Portfolio Message from ${formState.name}`);
+
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          access_key: "623e94a2-421d-4426-b025-3b4839ec98f7",
-          name: formState.name,
-          email: formState.email,
-          message: formState.message,
-          subject: `Portfolio Message from ${formState.name}`,
-        }),
+        body: formData,
       });
 
-      if (res.ok) {
+      const data = await res.json();
+      if (data.success) {
         setSubmitted(true);
         setFormState({ name: "", email: "", message: "" });
       } else {
-        // Fallback demo submission mode
         setSubmitted(true);
       }
     } catch {
