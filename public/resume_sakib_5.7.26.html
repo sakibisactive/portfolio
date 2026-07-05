@@ -210,7 +210,7 @@
       <span><i class="ci">📍</i>Mirpur, Dhaka, Bangladesh</span>
       <a href="tel:+8801612350860"><i class="ci">📞</i>+880 1612-350860</a>
       <a href="mailto:shahriarsakib1205@gmail.com"><i class="ci">✉️</i>shahriarsakib1205@gmail.com</a>
-      <a href="https://sakibisactive.github.io/portfolio" target="_blank"><i class="ci">🌐</i>Portfolio</a>
+      <a href="https://sakibwho.vercel.app" target="_blank"><i class="ci">🌐</i>Portfolio</a>
       <a href="https://github.com/sakibisactive" target="_blank">
         <svg class="brand-icon" viewBox="0 0 16 16" fill="currentColor" aria-label="GitHub">
           <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
@@ -357,11 +357,35 @@
   <section>
     <h2 class="section-title">Projects</h2>
 
-    <!-- Project 1 -->
+    <!-- Project 1: SoulSync -->
     <div class="entry">
       <div>
         <div class="entry-title">
-          ConnectHub — Real-Time Messaging Platform
+          SoulSync &mdash; Partner Matching Web Platform
+          <a href="https://soulsyncbd.vercel.app" target="_blank"
+             style="font-size:11.5px; font-weight:400; margin-left:0.5rem; color:var(--accent);">
+            🔗 Live
+          </a>
+          <a href="https://github.com/sakibisactive/SoulSync" target="_blank"
+             style="font-size:11.5px; font-weight:400; margin-left:0.4rem; color:var(--muted);">
+            ⌥ GitHub
+          </a>
+        </div>
+        <div class="entry-sub">MERN Stack (React 19, Node.js, Express.js, MongoDB) &middot; TypeScript &middot; Redux Toolkit &middot; RTK Query &middot; Socket.IO &middot; Tailwind CSS &middot; Cloudinary &middot; JWT Auth</div>
+      </div>
+      <div class="entry-date">2025</div>
+      <ul class="entry-bullets">
+        <li>Built a 5-dimensional weighted matching engine: Personality (35% cosine similarity across 50 Likert questions), Interests (25% Jaccard index), Lifestyle (20% weighted matrix), Age Preference (10%), and Location (10% Haversine distance).</li>
+        <li>Real-time chat with Socket.IO: typing indicators, online presence, read receipts, and push-like notifications; multi-photo upload via Cloudinary + Multer.</li>
+        <li>JWT access/refresh tokens with HTTP-only secure cookies, bcrypt password hashing, and RBAC (Guest, User, Admin) with a full admin moderation dashboard.</li>
+      </ul>
+    </div>
+
+    <!-- Project 2: ConnectHub -->
+    <div class="entry">
+      <div>
+        <div class="entry-title">
+          ConnectHub &mdash; Real-Time Messaging Platform
           <a href="https://connecthubinbd.vercel.app" target="_blank"
              style="font-size:11.5px; font-weight:400; margin-left:0.5rem; color:var(--accent);">
             🔗 Live
@@ -371,7 +395,7 @@
             ⌥ GitHub
           </a>
         </div>
-        <div class="entry-sub">MongoDB Atlas, Express.js, React.js, Node.js · Socket.IO · Redis (Upstash) · JWT Auth</div>
+        <div class="entry-sub">MongoDB Atlas, Express.js, React.js, Node.js &middot; Socket.IO &middot; Redis (Upstash) &middot; JWT Auth</div>
       </div>
       <div class="entry-date">2026</div>
       <ul class="entry-bullets">
@@ -381,45 +405,7 @@
       </ul>
     </div>
 
-    <!-- Project 2 -->
-    <div class="entry">
-      <div>
-        <div class="entry-title">
-          Doctor Handwriting Recognition
-          <a href="https://github.com/sakibisactive/Doctor-Handwriting-Recognition-ML-project" target="_blank"
-             style="font-size:11.5px; font-weight:400; margin-left:0.5rem; color:var(--muted);">
-            ⌥ GitHub
-          </a>
-        </div>
-        <div class="entry-sub">Python, TensorFlow/Keras · DenseNet121, MobileNetV3, ResNet50, ViT-B16, CNN-Transformer</div>
-      </div>
-      <div class="entry-date">2026</div>
-      <ul class="entry-bullets">
-        <li>Benchmarked five deep learning architectures (CNN, ViT) for physician prescription handwriting classification.</li>
-        <li>Designed the full pipeline: image preprocessing, augmentation, training, evaluation, and cross-model comparison.</li>
-      </ul>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="entry">
-      <div>
-        <div class="entry-title">
-          News Headline Text Classification
-          <a href="https://github.com/sakibisactive/News-Headline-Text-Classification-NLP-Project" target="_blank"
-             style="font-size:11.5px; font-weight:400; margin-left:0.5rem; color:var(--muted);">
-            ⌥ GitHub
-          </a>
-        </div>
-        <div class="entry-sub">Python, Scikit-learn, TensorFlow · SimpleRNN, LSTM, GRU, Logistic Regression, DNN</div>
-      </div>
-      <div class="entry-date">2025</div>
-      <ul class="entry-bullets">
-        <li>Evaluated 24 NLP pipeline configurations across preprocessing strategies, text representations, and model types.</li>
-        <li>Achieved best macro F1 of 0.9276 with Bidirectional GRU; documented findings in an IEEE-format report.</li>
-      </ul>
-    </div>
-
-    <!-- Project 4 -->
+    <!-- Project 3: E-Commerce -->
     <div class="entry">
       <div>
         <div class="entry-title">
@@ -433,7 +419,7 @@
             ⌥ GitHub
           </a>
         </div>
-        <div class="entry-sub">MongoDB, Express.js, React.js, Node.js (MERN) · JWT Auth · Tailwind CSS</div>
+        <div class="entry-sub">MongoDB, Express.js, React.js, Node.js (MERN) &middot; JWT Auth &middot; Tailwind CSS</div>
       </div>
       <div class="entry-date">2025</div>
       <ul class="entry-bullets">
@@ -442,7 +428,45 @@
       </ul>
     </div>
 
-    <!-- Project 5 -->
+    <!-- Project 4: Doctor Handwriting -->
+    <div class="entry">
+      <div>
+        <div class="entry-title">
+          Doctor Handwriting Recognition
+          <a href="https://github.com/sakibisactive/Doctor-Handwriting-Recognition-ML-project" target="_blank"
+             style="font-size:11.5px; font-weight:400; margin-left:0.5rem; color:var(--muted);">
+            ⌥ GitHub
+          </a>
+        </div>
+        <div class="entry-sub">Python, TensorFlow/Keras &middot; DenseNet121, MobileNetV3, ResNet50, ViT-B16, CNN-Transformer</div>
+      </div>
+      <div class="entry-date">2026</div>
+      <ul class="entry-bullets">
+        <li>Benchmarked five deep learning architectures (CNN, ViT) for physician prescription handwriting classification.</li>
+        <li>Designed the full pipeline: image preprocessing, augmentation, training, evaluation, and cross-model comparison.</li>
+      </ul>
+    </div>
+
+    <!-- Project 5: News Classification -->
+    <div class="entry">
+      <div>
+        <div class="entry-title">
+          News Headline Text Classification
+          <a href="https://github.com/sakibisactive/News-Headline-Text-Classification-NLP-Project" target="_blank"
+             style="font-size:11.5px; font-weight:400; margin-left:0.5rem; color:var(--muted);">
+            ⌥ GitHub
+          </a>
+        </div>
+        <div class="entry-sub">Python, Scikit-learn, TensorFlow &middot; SimpleRNN, LSTM, GRU, Logistic Regression, DNN</div>
+      </div>
+      <div class="entry-date">2025</div>
+      <ul class="entry-bullets">
+        <li>Evaluated 24 NLP pipeline configurations across preprocessing strategies, text representations, and model types.</li>
+        <li>Achieved best macro F1 of 0.9276 with Bidirectional GRU; documented findings in an IEEE-format report.</li>
+      </ul>
+    </div>
+
+    <!-- Project 6: A.Q.U.A. -->
     <div class="entry">
       <div>
         <div class="entry-title">A.Q.U.A.: Aquarium Automation System</div>
@@ -450,30 +474,7 @@
       </div>
       <div class="entry-date">2025</div>
       <ul class="entry-bullets">
-        <li>Developed an IoT-enabled automation system with scheduled feeding, water management, and WiFi control.</li>
-      </ul>
-    </div>
-
-    <!-- Project 6 -->
-    <div class="entry">
-      <div>
-        <div class="entry-title">
-          SoulSync — Partner Matching Web Platform
-          <a href="https://soulsyncbd.vercel.app" target="_blank"
-             style="font-size:11.5px; font-weight:400; margin-left:0.5rem; color:var(--accent);">
-            🔗 Live
-          </a>
-          <a href="https://github.com/sakibisactive/SoulSync" target="_blank"
-             style="font-size:11.5px; font-weight:400; margin-left:0.4rem; color:var(--muted);">
-            ⌥ GitHub
-          </a>
-        </div>
-        <div class="entry-sub">Laravel, PHP, MySQL · Tailwind CSS · Blade Templating</div>
-      </div>
-      <div class="entry-date">2024</div>
-      <ul class="entry-bullets">
-        <li>Built a compatibility-based matching platform with user profiling, score algorithms, and role-based admin controls.</li>
-        <li>Deployed live on Vercel with a normalised relational database schema and optimised multi-table queries.</li>
+        <li>Developed an IoT-enabled automation system with scheduled feeding, water quality monitoring, and real-time WiFi telemetry.</li>
       </ul>
     </div>
 
