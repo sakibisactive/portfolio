@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shahriar Sakib – CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ══════════════════════════════════════════════════
+       DESIGN TOKENS  ─  Change colours / fonts here
+    ══════════════════════════════════════════════════ */
+    :root {
+      --bg:        #FFFFFF;
+      --text:      #111827;        /* near-black body text          */
+      --muted:     #6B7280;        /* secondary / meta text         */
+      --accent:    #1D4ED8;        /* section headers + links       */
+      --rule:      #E5E7EB;        /* horizontal dividers           */
+      --page-w:    760px;          /* max resume width              */
+      --gap:       1.25rem;        /* space between major sections  */
+    }
+
+    /* ── RESET ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── BASE ───────────────────────────────────────── */
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    /* ── PAGE WRAPPER ───────────────────────────────── */
+    .page {
+      max-width: var(--page-w);
+      margin: 2.5rem auto;
+      padding: 0 2rem 3rem;
+    }
+
+    /* ══════════════════════════════════════════════════
+       HEADER  ─  Name + contacts
+    ══════════════════════════════════════════════════ */
+    header {
+      border-bottom: 2.5px solid var(--accent);
+      padding-bottom: 0.9rem;
+      margin-bottom: var(--gap);
+    }
+
+    .name {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.15rem 1.4rem;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .contacts a {
+      color: var(--muted);
+    }
+    .contacts a:hover {
+      color: var(--accent);
+    }
+
+    /* Emoji icons sit slightly lower so they align with text baseline */
+    .ci {
+      font-style: normal;
+      font-size: 13px;
+      margin-right: 0.25rem;
+      vertical-align: middle;
+      line-height: 1;
+    }
+
+    /* Inline SVG brand logos (GitHub, LinkedIn) */
+    .brand-icon {
+      width: 13px;
+      height: 13px;
+      vertical-align: middle;
+      margin-right: 0.28rem;
+      display: inline-block;
+      position: relative;
+      top: -1px;
+      flex-shrink: 0;
+    }
+
+    /* ══════════════════════════════════════════════════
+       SECTIONS
+    ══════════════════════════════════════════════════ */
+    section {
+      margin-bottom: var(--gap);
+    }
+
+    .section-title {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ── PROFILE PARAGRAPH ──────────────────────────── */
+    .profile-text {
+      color: var(--text);
+      max-width: 95%;
+    }
+
+    /* ══════════════════════════════════════════════════
+       ENTRY  ─  Used for Education, Projects, Thesis
+    ══════════════════════════════════════════════════ */
+    .entry {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      column-gap: 1rem;
+      align-items: baseline;
+      margin-bottom: 0.7rem;
+    }
+
+    .entry-title {
+      font-weight: 600;
+      font-size: 13.5px;
+      line-height: 1.3;
+    }
+
+    .entry-sub {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-top: 0.1rem;
+    }
+
+    .entry-date {
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    /* Bullet list spans full width inside .entry */
+    .entry-bullets {
+      grid-column: 1 / -1;
+      padding-left: 1.1rem;
+      margin-top: 0.3rem;
+    }
+
+    .entry-bullets li {
+      font-size: 13px;
+      margin-bottom: 0.2rem;
+      color: var(--text);
+    }
+
+    /* ══════════════════════════════════════════════════
+       SKILLS TABLE  ─  two-column label / value grid
+    ══════════════════════════════════════════════════ */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 0.28rem 1rem;
+      align-items: baseline;
+    }
+
+    .skill-label {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .skill-value {
+      font-size: 13px;
+    }
+
+    /* ══════════════════════════════════════════════════
+       PRINT STYLES  ─  looks clean when saved as PDF
+       File → Print → Save as PDF in any browser
+    ══════════════════════════════════════════════════ */
+    @media print {
+      body  { font-size: 12px; }
+      .page { margin: 0; padding: 1.2cm 1.8cm; max-width: 100%; }
+      a     { color: var(--text) !important; }
+      header          { border-bottom-color: #1D4ED8; }
+      .section-title  { color: #1D4ED8; border-bottom-color: #ccc; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ══════════════════════════════════════════════════
+       HEADER  ─  edit your name / contacts here
+  ══════════════════════════════════════════════════ -->
+  <header>
+    <h1 class="name">Shahriar Sakib</h1>
+    <div class="contacts">
+      <span><i class="ci">📍</i>Mirpur, Dhaka, Bangladesh</span>
+      <a href="tel:+8801612350860"><i class="ci">📞</i>+880 1612-350860</a>
+      <a href="mailto:shahriarsakib1205@gmail.com"><i class="ci">✉️</i>shahriarsakib1205@gmail.com</a>
+      <a href="https://sakibisactive.github.io/portfolio" target="_blank"><i class="ci">🌐</i>Portfolio</a>
+      <a href="https://github.com/sakibisactive" target="_blank">
+        <svg class="brand-icon" viewBox="0 0 16 16" fill="currentColor" aria-label="GitHub">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+            0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+            -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
+            .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
+            -.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27
+            .68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12
+            .51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+            0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8
+            c0-4.42-3.58-8-8-8z"/>
+        </svg>github.com/sakibisactive
+      </a>
+      <a href="https://linkedin.com/in/shahriar-sakib-6364903b9" target="_blank">
+        <svg class="brand-icon" viewBox="0 0 24 24" aria-label="LinkedIn">
+          <path fill="#0A66C2" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037
+            -1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046
+            c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286z
+            M5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065z
+            m1.782 13.019H3.555V9h3.564v11.452z
+            M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24
+            h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>LinkedIn
+      </a>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════
+       PROFILE  ─  keep this to 2–3 sentences max.
+       Make it specific to YOU — avoid generic phrases
+       like "detail-oriented" or "preparing for a role".
+  ══════════════════════════════════════════════════ -->
+  <section>
+    <h2 class="section-title">Profile</h2>
+    <p class="profile-text">
+      Final-year Computer Science &amp; Engineering student at BRAC University with hands-on
+      experience across full-stack web development, applied machine learning, database systems,
+      and IoT. Currently conducting undergraduate thesis research on bio-inspired swarm routing
+      algorithms. Passionate about writing reliable, production-ready software and building
+      systems that solve real-world problems.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       EDUCATION  ─  most recent first
+  ══════════════════════════════════════════════════ -->
+  <section>
+    <h2 class="section-title">Education</h2>
+
+    <!-- Entry: BRACU -->
+    <div class="entry">
+      <div>
+        <div class="entry-title">B.Sc. in Computer Science &amp; Engineering</div>
+        <div class="entry-sub">BRAC University, Dhaka &nbsp;·&nbsp; CGPA: 3.45 / 4.00</div>
+      </div>
+      <div class="entry-date">2022 – 2026</div>
+    </div>
+
+    <!-- Entry: HSC -->
+    <div class="entry">
+      <div>
+        <div class="entry-title">Higher Secondary Certificate, Science</div>
+        <div class="entry-sub">Dhaka City College, Dhaka &nbsp;·&nbsp; GPA: 5.00 / 5.00</div>
+      </div>
+      <div class="entry-date">2020</div>
+    </div>
+
+    <!-- Entry: SSC -->
+    <div class="entry">
+      <div>
+        <div class="entry-title">Secondary School Certificate, Science</div>
+        <div class="entry-sub">Govt. Laboratory High School, Dhaka &nbsp;·&nbsp; GPA: 5.00 / 5.00</div>
+      </div>
+      <div class="entry-date">2018</div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       TECHNICAL SKILLS  ─  add / remove rows freely
+  ══════════════════════════════════════════════════ -->
+  <section>
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+
+      <span class="skill-label">Languages</span>
+      <span class="skill-value">Python, JavaScript, PHP, SQL, C, C++</span>
+
+      <span class="skill-label">ML / Data</span>
+      <span class="skill-value">NumPy, Pandas, Matplotlib, Scikit-learn, TensorFlow/Keras</span>
+
+      <span class="skill-label">Deep Learning</span>
+      <span class="skill-value">CNN, RNN, LSTM, GRU, Transformer, ViT &nbsp;·&nbsp; DenseNet, ResNet, MobileNet</span>
+
+      <span class="skill-label">Web / Full-Stack</span>
+      <span class="skill-value">React.js, Node.js, Express.js, Socket.IO, Next.js, Laravel, PHP, REST APIs</span>
+
+      <span class="skill-label">Databases</span>
+      <span class="skill-value">MySQL, MongoDB Atlas, Redis (Upstash)</span>
+
+      <span class="skill-label">Tools &amp; DevOps</span>
+      <span class="skill-value">Git, GitHub, Vercel, Jupyter Notebook, VS Code, Overleaf, SUMO</span>
+
+      <span class="skill-label">Interests</span>
+      <span class="skill-value">Full-Stack Development, Machine Learning, NLP, Computer Vision, IoT, Swarm AI</span>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       UNDERGRADUATE THESIS  ─  put this BEFORE projects
+       so the most impressive academic work stands out
+  ══════════════════════════════════════════════════ -->
+  <section>
+    <h2 class="section-title">Undergraduate Thesis</h2>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">E³-Hybrid Swarm Routing for EV Emergency Coordination</div>
+        <div class="entry-sub">
+          Supervisor: Dr. Md. Khalilur Rahman, BRAC University
+          &nbsp;·&nbsp; Status: In Progress
+        </div>
+      </div>
+      <div class="entry-date">2025 – 2026</div>
+      <ul class="entry-bullets">
+        <li>
+          Proposes E³-Hybrid, a novel algorithm combining ACO, PSO, and BCO for
+          decentralised multi-agent EV routing under emergency conditions in urban environments.
+        </li>
+        <li>
+          Runs 1,050 simulation batches (7 algorithms × 6 stress scenarios × 25 seeds)
+          on a SUMO-based Midtown Manhattan network with full statistical analysis and
+          IEEE-format visualisations.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       PROJECTS  ─  most impactful / recent first.
+       TIP: each bullet should answer "so what?" —
+       add a metric or outcome wherever possible.
+  ══════════════════════════════════════════════════ -->
+  <section>
+    <h2 class="section-title">Projects</h2>
+
+    <!-- Project 1 -->
+    <div class="entry">
+      <div>
+        <div class="entry-title">
+          ConnectHub — Real-Time Messaging Platform
+          <a href="https://connecthubinbd.vercel.app" target="_blank"
+             style="font-size:11.5px; font-weight:400; margin-left:0.5rem; color:var(--accent);">
+            🔗 Live
+          </a>
+          <a href="https://github.com/sakibisactive/ConnectHub" target="_blank"
+             style="font-size:11.5px; font-weight:400; margin-left:0.4rem; color:var(--muted);">
+            ⌥ GitHub
+          </a>
+        </div>
+        <div class="entry-sub">MongoDB Atlas, Express.js, React.js, Node.js · Socket.IO · Redis (Upstash) · JWT Auth</div>
+      </div>
+      <div class="entry-date">2026</div>
+      <ul class="entry-bullets">
+        <li>Built a production-grade real-time chat application with WebSocket-based messaging via Socket.IO, deployed live on Vercel.</li>
+        <li>Integrated Upstash Redis for in-memory caching to reduce database load and improve message delivery latency.</li>
+        <li>Implemented JWT authentication, persistent message history with MongoDB Atlas, and a responsive UI.</li>
+      </ul>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="entry">
+      <div>
+        <div class="entry-title">
+          Doctor Handwriting Recognition
+          <a href="https://github.com/sakibisactive/Doctor-Handwriting-Recognition-ML-project" target="_blank"
+             style="font-size:11.5px; font-weight:400; margin-left:0.5rem; color:var(--muted);">
+            ⌥ GitHub
+          </a>
+        </div>
+        <div class="entry-sub">Python, TensorFlow/Keras · DenseNet121, MobileNetV3, ResNet50, ViT-B16, CNN-Transformer</div>
+      </div>
+      <div class="entry-date">2026</div>
+      <ul class="entry-bullets">
+        <li>Benchmarked five deep learning architectures (CNN, ViT) for physician prescription handwriting classification.</li>
+        <li>Designed the full pipeline: image preprocessing, augmentation, training, evaluation, and cross-model comparison.</li>
+      </ul>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="entry">
+      <div>
+        <div class="entry-title">
+          News Headline Text Classification
+          <a href="https://github.com/sakibisactive/News-Headline-Text-Classification-NLP-Project" target="_blank"
+             style="font-size:11.5px; font-weight:400; margin-left:0.5rem; color:var(--muted);">
+            ⌥ GitHub
+          </a>
+        </div>
+        <div class="entry-sub">Python, Scikit-learn, TensorFlow · SimpleRNN, LSTM, GRU, Logistic Regression, DNN</div>
+      </div>
+      <div class="entry-date">2025</div>
+      <ul class="entry-bullets">
+        <li>Evaluated 24 NLP pipeline configurations across preprocessing strategies, text representations, and model types.</li>
+        <li>Achieved best macro F1 of 0.9276 with Bidirectional GRU; documented findings in an IEEE-format report.</li>
+      </ul>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="entry">
+      <div>
+        <div class="entry-title">
+          E-Commerce Platform
+          <a href="https://e-commerceinbd.vercel.app" target="_blank"
+             style="font-size:11.5px; font-weight:400; margin-left:0.5rem; color:var(--accent);">
+            🔗 Live
+          </a>
+          <a href="https://github.com/sakibisactive/E-commerce" target="_blank"
+             style="font-size:11.5px; font-weight:400; margin-left:0.4rem; color:var(--muted);">
+            ⌥ GitHub
+          </a>
+        </div>
+        <div class="entry-sub">MongoDB, Express.js, React.js, Node.js (MERN) · JWT Auth · Tailwind CSS</div>
+      </div>
+      <div class="entry-date">2025</div>
+      <ul class="entry-bullets">
+        <li>Built a full-stack e-commerce application with dynamic product catalogs, JWT authentication, and cart management.</li>
+        <li>Deployed live on Vercel with RESTful API backend and persistent MongoDB order storage.</li>
+      </ul>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="entry">
+      <div>
+        <div class="entry-title">A.Q.U.A.: Aquarium Automation System</div>
+        <div class="entry-sub">Arduino Uno R3, ESP8266, IoT Sensors, Embedded C</div>
+      </div>
+      <div class="entry-date">2025</div>
+      <ul class="entry-bullets">
+        <li>Developed an IoT-enabled automation system with scheduled feeding, water management, and WiFi control.</li>
+      </ul>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="entry">
+      <div>
+        <div class="entry-title">
+          SoulSync — Partner Matching Web Platform
+          <a href="https://soulsyncbd.vercel.app" target="_blank"
+             style="font-size:11.5px; font-weight:400; margin-left:0.5rem; color:var(--accent);">
+            🔗 Live
+          </a>
+          <a href="https://github.com/sakibisactive/SoulSync" target="_blank"
+             style="font-size:11.5px; font-weight:400; margin-left:0.4rem; color:var(--muted);">
+            ⌥ GitHub
+          </a>
+        </div>
+        <div class="entry-sub">Laravel, PHP, MySQL · Tailwind CSS · Blade Templating</div>
+      </div>
+      <div class="entry-date">2024</div>
+      <ul class="entry-bullets">
+        <li>Built a compatibility-based matching platform with user profiling, score algorithms, and role-based admin controls.</li>
+        <li>Deployed live on Vercel with a normalised relational database schema and optimised multi-table queries.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       LANGUAGES
+  ══════════════════════════════════════════════════ -->
+  <section>
+    <h2 class="section-title">Languages</h2>
+    <div class="skills-grid">
+      <span class="skill-label">Bangla</span>
+      <span class="skill-value">Native</span>
+      <span class="skill-label">English</span>
+      <span class="skill-value">Proficient (Academic &amp; Professional)</span>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
