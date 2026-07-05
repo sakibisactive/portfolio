@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shahriar Sakib — ML & Software Engineer",
+  title: "SAKIB'S PORTFOLIO",
   description:
     "Personal portfolio of Shahriar Sakib, final-year Computer Science student at BRAC University specializing in Machine Learning, Deep Learning, NLP, and Swarm Robotics / IoT.",
   keywords: [
@@ -36,17 +36,17 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Shahriar Sakib" }],
   openGraph: {
-    title: "Shahriar Sakib — ML & Software Engineer",
+    title: "SAKIB'S PORTFOLIO",
     description:
       "Building intelligent systems at the intersection of Machine Learning, NLP, and Swarm Robotics.",
     url: "https://shahriarsakib.vercel.app",
-    siteName: "Shahriar Sakib Portfolio",
+    siteName: "SAKIB'S PORTFOLIO",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shahriar Sakib — ML & Software Engineer",
+    title: "SAKIB'S PORTFOLIO",
     description:
       "Building intelligent systems at the intersection of Machine Learning, NLP, and Swarm Robotics.",
   },
