@@ -28,7 +28,7 @@ export default function ContactSection() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_ACCESS_KEY", // Free key from web3forms.com
+          access_key: "623e94a2-421d-4426-b025-3b4839ec98f7",
           name: formState.name,
           email: formState.email,
           message: formState.message,
