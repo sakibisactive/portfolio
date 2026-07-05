@@ -119,7 +119,7 @@ const projects: Project[] = [
     tech: ["Arduino Uno R3", "ESP8266 WiFi", "IoT Sensors", "Embedded C", "Blynk App"],
     description: "IoT-enabled aquarium environment automation with scheduled feeding mechanisms, real-time water quality sensors, and remote WiFi monitoring control.",
     statBadge: "24/7 AUTOMATED IOT TELEMETRY",
-    gridSpan: "lg:col-span-4",
+    gridSpan: "lg:col-span-12",
     githubUrl: "https://github.com/sakibisactive",
     highlights: [
       "Automated servo-based food dispenser with customizable timer schedule.",
